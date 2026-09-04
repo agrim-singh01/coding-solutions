@@ -48,8 +48,8 @@ ans = [nums[nums[0]], nums[nums[1]], nums[nums[2]], nums[nums[3]], nums[nums[4]]
 
 **Language:** Java  
 **Runtime:** 1 ms (beats 99.59%)  
-**Memory:** 47.1 MB (beats 52.47%)  
-**Submitted:** 2026-09-04T21:42:31.670Z  
+**Memory:** 46.9 MB (beats 94.38%)  
+**Submitted:** 2026-09-04T21:42:38.840Z  
 
 ```java
 class Solution {
