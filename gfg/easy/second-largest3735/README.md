@@ -37,7 +37,7 @@ Explanation: The largest element of the array is 10 and the second largest eleme
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-04T20:34:18.523Z  
+**Submitted:** 2026-09-04T21:02:45.030Z  
 
 ```java
 class Solution {
