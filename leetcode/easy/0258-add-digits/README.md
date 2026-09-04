@@ -41,17 +41,15 @@ Output: 0
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 41.9 MB  
-**Submitted:** 2026-09-04T15:32:43.622Z  
+**Runtime:** 1 ms (beats 98.10%)  
+**Memory:** 42.9 MB (beats 9.68%)  
+**Submitted:** 2026-09-04T15:46:55.174Z  
 
 ```java
 class Solution {
     public int addDigits(int n) {
         int sum = 0;
-        if(n == 0){
-            sum = 0;
-        }
+       
         while(n > 9){
             sum = 0;
    while(n > 0){
@@ -62,7 +60,7 @@ class Solution {
         n = sum;
         }
      
-        return sum;
+        return n;
     }
 }
 ```
