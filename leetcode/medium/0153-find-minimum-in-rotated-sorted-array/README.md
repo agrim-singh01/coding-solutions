@@ -58,8 +58,8 @@ Explanation: The original array was [11,13,15,17] and it was rotated 4 times.
 
 **Language:** Java  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 43.9 MB (beats 38.02%)  
-**Submitted:** 2026-09-04T13:43:10.823Z  
+**Memory:** 43.4 MB (beats 97.06%)  
+**Submitted:** 2026-09-04T14:48:50.644Z  
 
 ```java
 class Solution {
