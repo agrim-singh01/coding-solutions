@@ -1,9 +1,7 @@
 class Solution {
     public int addDigits(int n) {
         int sum = 0;
-        if(n == 0){
-            sum = 0;
-        }
+       
         while(n > 9){
             sum = 0;
    while(n > 0){
@@ -14,6 +12,6 @@ class Solution {
         n = sum;
         }
      
-        return sum;
+        return n;
     }
 }
