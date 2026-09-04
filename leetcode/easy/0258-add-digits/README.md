@@ -42,25 +42,19 @@ Output: 0
 
 **Language:** Java  
 **Runtime:** 1 ms (beats 98.10%)  
-**Memory:** 42.9 MB (beats 9.68%)  
-**Submitted:** 2026-09-04T15:46:55.174Z  
+**Memory:** 42.3 MB (beats 90.96%)  
+**Submitted:** 2026-09-04T15:57:08.159Z  
 
 ```java
 class Solution {
     public int addDigits(int n) {
-        int sum = 0;
-       
-        while(n > 9){
-            sum = 0;
-   while(n > 0){
-            int digit = n % 10;
-            sum+=digit;
-            n /= 10;  
+        if(n == 0){
+            return 0;
         }
-        n = sum;
+        if(n % 9 == 0){
+            return 9;
         }
-     
-        return n;
+        return n%9;
     }
 }
 ```
