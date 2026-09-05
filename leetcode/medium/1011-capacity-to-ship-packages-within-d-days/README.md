@@ -63,23 +63,23 @@ Explanation:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 11 ms (beats 64.83%)  
-**Memory:** 50.4 MB (beats 19.74%)  
-**Submitted:** 2026-09-05T03:40:06.609Z  
+**Runtime:** 10 ms (beats 81.31%)  
+**Memory:** 49.8 MB (beats 96.33%)  
+**Submitted:** 2026-09-05T03:41:57.786Z  
 
 ```java
 class Solution {
-    public int shipWithinDays(int[] nums, int k) {
+    public int shipWithinDays(int[] weight, int days) {
          int low=0;
         int high=0;
 
         int sum=0;
-        int max=nums[0];
-        for(int i=0;i<nums.length;i++){
-            if(nums[i]>max){
-                max=nums[i];
+        int max=weight[0];
+        for(int i=0;i<weight.length;i++){
+            if(weight[i]>max){
+                max=weight[i];
             }
-            sum+=nums[i];
+            sum+=weight[i];
         }
         low=max;
         high=sum;
@@ -89,16 +89,16 @@ class Solution {
             int parts=1;
             int currentsum=0;
 
-            for(int i=0;i<nums.length;i++){
-                if(currentsum+nums[i]>mid){
+            for(int i=0;i<weight.length;i++){
+                if(currentsum+weight[i]>mid){
                     parts++;
-                    currentsum=nums[i];
+                    currentsum=weight[i];
                 }
                 else{
-                    currentsum+=nums[i];
+                    currentsum+=weight[i];
                 }
             }
-            if(parts>k){
+            if(parts>days){
                 low=mid+1;
             }
             else{
