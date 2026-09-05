@@ -1,15 +1,15 @@
 class Solution {
-    public int shipWithinDays(int[] nums, int k) {
+    public int shipWithinDays(int[] weight, int days) {
          int low=0;
         int high=0;
 
         int sum=0;
-        int max=nums[0];
-        for(int i=0;i<nums.length;i++){
-            if(nums[i]>max){
-                max=nums[i];
+        int max=weight[0];
+        for(int i=0;i<weight.length;i++){
+            if(weight[i]>max){
+                max=weight[i];
             }
-            sum+=nums[i];
+            sum+=weight[i];
         }
         low=max;
         high=sum;
@@ -19,16 +19,16 @@ class Solution {
             int parts=1;
             int currentsum=0;
 
-            for(int i=0;i<nums.length;i++){
-                if(currentsum+nums[i]>mid){
+            for(int i=0;i<weight.length;i++){
+                if(currentsum+weight[i]>mid){
                     parts++;
-                    currentsum=nums[i];
+                    currentsum=weight[i];
                 }
                 else{
-                    currentsum+=nums[i];
+                    currentsum+=weight[i];
                 }
             }
-            if(parts>k){
+            if(parts>days){
                 low=mid+1;
             }
             else{
