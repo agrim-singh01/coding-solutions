@@ -40,9 +40,9 @@ The character `'l'` at index 0 is the first character that does not occur at any
 ## Solution
 
 **Language:** Java  
-**Runtime:** 7 ms (beats 57.95%)  
-**Memory:** 47 MB (beats 57.88%)  
-**Submitted:** 2026-09-07T17:19:12.375Z  
+**Runtime:** 6 ms (beats 85.16%)  
+**Memory:** 47.3 MB (beats 6.05%)  
+**Submitted:** 2026-09-07T17:19:26.078Z  
 
 ```java
 class Solution {
