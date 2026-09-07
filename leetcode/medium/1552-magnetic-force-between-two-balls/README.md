@@ -44,8 +44,8 @@ Explanation: We can use baskets 1 and 1000000000.
 
 **Language:** Java  
 **Runtime:** 46 ms (beats 70.94%)  
-**Memory:** 79.2 MB (beats 25.60%)  
-**Submitted:** 2026-09-07T04:22:49.997Z  
+**Memory:** 79.1 MB (beats 45.74%)  
+**Submitted:** 2026-09-07T04:24:15.664Z  
 
 ```java
 class Solution {
