@@ -38,31 +38,30 @@ The string  **s** contains only lowercase english alphabets and spaces.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-09T20:39:51.685Z  
+**Submitted:** 2026-09-09T20:44:47.845Z  
 
 ```java
 class Solution {
-    // Function to convert the given string to Camel Case
-    String camelCase(String s){
+    String toCamelCase(String s){
         StringBuilder ans = new StringBuilder();
-        boolean makeupper = false;
-        
+        boolean upper = false;
         for(int i=0;i<s.length();i++){
             char ch = s.charAt(i);
-            if(ch == ' ' ){
-                makeupper = true;
-            }else if(makeupper == true){
+            if(ch == ' '){
+                upper = true;
+            }else if(upper == true){
                 ans.append(Character.toUpperCase(ch));
-                makeupper=false;
+                upper = false;
             }else{
                 ans.append(ch);
             }
         }
         return ans.toString();
-        
     }
+   
     public String convertToCamelCase(String s) {
-    return camelCase(s); 
+        return toCamelCase(s);
+        
     }
 }
 ```
