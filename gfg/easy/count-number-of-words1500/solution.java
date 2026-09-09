@@ -1,18 +1,19 @@
 class Solution {
     public int countWords(String s) {
+        boolean isFound = false;
         int count = 0;
-        boolean word = false;
-        for(int i=0;i<s.length();i++){
+        for(int i = 0;i<s.length();i++){
             char letter = s.charAt(i);
-            if(letter == ' ' || letter == '\n' || letter == '\t'){
-                word = false;
+            if(letter ==  ' ' || letter == '\n' || letter == '\t'){
+                isFound = false;
             }else{
-            if(word == false){
-                word = true;
-                count++;
-            }
+                if(isFound == false){
+                    isFound=true;
+                    count++;
+                }
             }
         }
         return count;
+        
     }
 }
