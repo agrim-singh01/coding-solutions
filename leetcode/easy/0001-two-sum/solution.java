@@ -7,6 +7,6 @@ class Solution {
                 }
             }
         }
-        return null;
+        return new int[] {-1,-1};
     }
 }
