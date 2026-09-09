@@ -40,8 +40,8 @@ Output: [[1,4],[2,5],[3,6]]
 
 **Language:** Java  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 46.6 MB (beats 68.43%)  
-**Submitted:** 2026-09-09T14:40:36.003Z  
+**Memory:** 46.6 MB (beats 85.58%)  
+**Submitted:** 2026-09-09T14:40:49.935Z  
 
 ```java
 class Solution {
