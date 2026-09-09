@@ -53,9 +53,9 @@ Output: [0,1]
 ## Solution
 
 **Language:** Java  
-**Runtime:** 44 ms (beats 34.92%)  
-**Memory:** 47.1 MB (beats 59.12%)  
-**Submitted:** 2026-09-09T03:10:20.094Z  
+**Runtime:** 45 ms (beats 26.96%)  
+**Memory:** 47 MB (beats 74.19%)  
+**Submitted:** 2026-09-09T03:14:09.502Z  
 
 ```java
 class Solution {
@@ -67,7 +67,7 @@ class Solution {
                 }
             }
         }
-        return null;
+        return new int[] {-1,-1};
     }
 }
 ```
