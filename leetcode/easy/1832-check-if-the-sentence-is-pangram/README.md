@@ -37,26 +37,25 @@ Output: false
 ## Solution
 
 **Language:** Java  
-**Runtime:** 2 ms (beats 62.81%)  
-**Memory:** 43.1 MB (beats 16.93%)  
-**Submitted:** 2026-09-07T18:42:33.288Z  
+**Runtime:** 2 ms (beats 62.89%)  
+**Memory:** 43 MB (beats 33.56%)  
+**Submitted:** 2026-09-09T20:22:39.249Z  
 
 ```java
 class Solution {
     public boolean checkIfPangram(String sentence) {
-        boolean size[] = new boolean[26];
-       for(int i=0;i<sentence.length();i++){
-         char letter = sentence.charAt(i);
-         int character = letter - 'a';
-         size[character] = true;
-       }
-       for(int i=0;i<26;i++){
-  
-        if(size[i] == false){
-            return false;
+        boolean[] size = new boolean[26];
+        for(int i= 0;i<sentence.length();i++){
+            char ch = sentence.charAt(i);
+            int character = ch - 'a';
+            size[character] = true;
         }
-       }
-       return true;
+        for(int i=0;i<26;i++){
+            if(size[i] == false){
+return false;
+            }
+        }
+        return true;
     }
 }
 ```
