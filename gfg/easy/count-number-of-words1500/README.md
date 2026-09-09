@@ -29,25 +29,26 @@ Explanation: There are two words in the string: "a" and "yo". The characters \n 
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-08T18:50:26.555Z  
+**Submitted:** 2026-09-09T19:31:12.822Z  
 
 ```java
 class Solution {
     public int countWords(String s) {
+        boolean isFound = false;
         int count = 0;
-        boolean word = false;
-        for(int i=0;i<s.length();i++){
+        for(int i = 0;i<s.length();i++){
             char letter = s.charAt(i);
-            if(letter == ' ' || letter == '\n' || letter == '\t'){
-                word = false;
+            if(letter ==  ' ' || letter == '\n' || letter == '\t'){
+                isFound = false;
             }else{
-            if(word == false){
-                word = true;
-                count++;
-            }
+                if(isFound == false){
+                    isFound=true;
+                    count++;
+                }
             }
         }
         return count;
+        
     }
 }
 ```
