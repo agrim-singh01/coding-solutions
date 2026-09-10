@@ -47,32 +47,26 @@ Output: [1,2,1,2]
 
 **Language:** Java  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 46.3 MB (beats 90.83%)  
-**Submitted:** 2026-09-10T04:56:27.241Z  
+**Memory:** 46.5 MB (beats 41.13%)  
+**Submitted:** 2026-09-10T05:04:57.472Z  
 
 ```java
 class Solution {
     public int[] shuffle(int[] nums, int n) {
-
-        int[] ans = new int[nums.length];
-
+        int[] num = new int[nums.length];
         int i = 0;
         int j = n;
         int k = 0;
+    while(i<n){
+        num[k] = nums[i];
+        k++;
+        num[k] = nums[j];
+        k++;
 
-        while (i < n) {
-
-            ans[k] = nums[i];
-            k++;
-
-            ans[k] = nums[j];
-            k++;
-
-            i++;
-            j++;
-        }
-
-        return ans;
+        i++;
+        j++;
+    }
+    return num;
     }
 }
 ```
