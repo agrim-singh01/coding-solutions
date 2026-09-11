@@ -42,23 +42,25 @@ Output: "lovely"
 ## Solution
 
 **Language:** Java  
-**Runtime:** 1 ms (beats 25.97%)  
-**Memory:** 43.3 MB (beats 8.46%)  
-**Submitted:** 2026-09-11T04:14:11.409Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 42.9 MB (beats 51.50%)  
+**Submitted:** 2026-09-11T04:15:15.324Z  
 
 ```java
 class Solution {
     public String toLowerCase(String s) {
-       StringBuilder sb = new StringBuilder();
-       for(int i=0;i<s.length();i++){
-        char ch = s.charAt(i);
-        if(Character.isUpperCase(ch)){
-            sb.append(Character.toLowerCase(ch));
-        }else{
-            sb.append(ch);
-        }
-       }
-       return sb.toString();
+    //    StringBuilder sb = new StringBuilder();
+    //    for(int i=0;i<s.length();i++){
+    //     char ch = s.charAt(i);
+    //     if(Character.isUpperCase(ch)){
+    //         sb.append(Character.toLowerCase(ch));
+    //     }else{
+    //         sb.append(ch);
+    //     }
+    //    }
+    //    return sb.toString();
+    String str = s.toLowerCase();
+    return str;
            }
 }
 ```
