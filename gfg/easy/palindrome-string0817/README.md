@@ -25,7 +25,7 @@ Explanation: "abc" does not read the same forwards and backwards, so it is not a
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-11T05:37:15.088Z  
+**Submitted:** 2026-09-11T05:40:25.840Z  
 
 ```java
 class Solution {
@@ -33,10 +33,10 @@ class Solution {
         StringBuilder sb = new StringBuilder(s);
          sb.reverse();
          String ans = sb.toString();
-         
+
          return ans.equals(s);
-    
-        
+
+
     }
 }
 ```
