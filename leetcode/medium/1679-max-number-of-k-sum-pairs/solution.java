@@ -8,10 +8,10 @@ class Solution {
 
         while(left<right){
            // if(k<0) return 0;
-            if(left == right){
-                right++;
-                continue;
-            }
+            // if(left == right){
+            //     right++;
+            //     continue;
+            // }
             int diff = nums[right] + nums[left];
             if(diff > k){
                 right--;
