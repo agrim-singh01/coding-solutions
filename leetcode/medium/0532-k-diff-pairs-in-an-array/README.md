@@ -56,8 +56,8 @@ Explanation: There is one 0-diff pair in the array, (1, 1).
 
 **Language:** Java  
 **Runtime:** 10 ms (beats 90.47%)  
-**Memory:** 46.4 MB (beats 77.60%)  
-**Submitted:** 2026-09-12T03:22:54.957Z  
+**Memory:** 46.3 MB (beats 77.60%)  
+**Submitted:** 2026-09-12T03:27:39.724Z  
 
 ```java
 class Solution {
@@ -66,7 +66,7 @@ class Solution {
         int left = 0;
         int right = 1;
         int count = 0;
-
+if(k<0) return 0;
         while(right < nums.length){
             if(left == right){
                 right++;
