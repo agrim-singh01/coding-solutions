@@ -4,7 +4,7 @@ class Solution {
         int left = 0;
         int right = 1;
         int count = 0;
-
+if(k<0) return 0;
         while(right < nums.length){
             if(left == right){
                 right++;
