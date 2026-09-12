@@ -44,9 +44,9 @@ There are no more pairs that sum up to 6, hence a total of 1 operation.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 23 ms (beats 90.63%)  
-**Memory:** 69.3 MB (beats 33.69%)  
-**Submitted:** 2026-09-12T03:54:09.620Z  
+**Runtime:** 1 ms  
+**Memory:** 43 MB  
+**Submitted:** 2026-09-12T03:54:41.527Z  
 
 ```java
 class Solution {
@@ -59,10 +59,10 @@ class Solution {
 
         while(left<right){
            // if(k<0) return 0;
-            if(left == right){
-                right++;
-                continue;
-            }
+            // if(left == right){
+            //     right++;
+            //     continue;
+            // }
             int diff = nums[right] + nums[left];
             if(diff > k){
                 right--;
