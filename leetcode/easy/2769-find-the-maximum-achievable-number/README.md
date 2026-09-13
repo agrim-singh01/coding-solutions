@@ -45,14 +45,14 @@ Apply the following operation twice to make the maximum achievable number equal 
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 41.2 MB  
-**Submitted:** 2026-09-13T11:30:04.672Z  
+**Runtime:** 1 ms (beats 100.00%)  
+**Memory:** 43.2 MB (beats 65.93%)  
+**Submitted:** 2026-09-13T11:40:03.564Z  
 
 ```java
 class Solution {
     public int theMaximumAchievableX(int num, int t) {
-        return (num*2)+t;
+        return num+(2*t);
     }
 }
 ```
