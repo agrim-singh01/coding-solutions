@@ -43,8 +43,8 @@ Output: "lovely"
 
 **Language:** Java  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 42.9 MB (beats 51.50%)  
-**Submitted:** 2026-09-11T04:15:15.324Z  
+**Memory:** 42.9 MB (beats 51.66%)  
+**Submitted:** 2026-09-13T04:31:40.422Z  
 
 ```java
 class Solution {
@@ -59,8 +59,8 @@ class Solution {
     //     }
     //    }
     //    return sb.toString();
-    String str = s.toLowerCase();
-    return str;
+   // String str = s.toLowerCase();
+    return s.toLowerCase();
            }
 }
 ```
