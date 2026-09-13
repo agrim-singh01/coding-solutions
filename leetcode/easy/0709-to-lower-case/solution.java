@@ -10,7 +10,7 @@ class Solution {
     //     }
     //    }
     //    return sb.toString();
-    String str = s.toLowerCase();
-    return str;
+   // String str = s.toLowerCase();
+    return s.toLowerCase();
            }
 }
