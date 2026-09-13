@@ -54,8 +54,8 @@ Explanation: The product of all values in the array is -1, and signFunc(-1) = -1
 
 **Language:** Java  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 45.2 MB (beats 57.38%)  
-**Submitted:** 2026-09-13T10:24:54.792Z  
+**Memory:** 45.1 MB (beats 87.81%)  
+**Submitted:** 2026-09-13T10:41:12.238Z  
 
 ```java
 class Solution {
