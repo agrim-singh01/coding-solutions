@@ -11,7 +11,7 @@ class Solution {
                 y--;
             }else if(ch == 'L'){
                 x--;
-            }else if(ch == 'R'){
+            }else {
                 x++;
             }
         }
