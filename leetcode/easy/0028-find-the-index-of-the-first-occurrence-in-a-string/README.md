@@ -38,13 +38,23 @@ Explanation: "leeto" did not occur in "leetcode", so we return -1.
 
 **Language:** Java  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 42.8 MB (beats 91.46%)  
-**Submitted:** 2026-09-13T10:35:27.255Z  
+**Memory:** 43.2 MB (beats 33.60%)  
+**Submitted:** 2026-09-13T10:40:41.720Z  
 
 ```java
 class Solution {
     public int strStr(String haystack, String needle) {
-        return haystack.indexOf(needle);
+       // return haystack.indexOf(needle);
+
+       if(needle.length()>haystack.length()){
+        return -1;
+       }
+       for(int i=0;i<=haystack.length()-needle.length();i++){
+        if(haystack.substring(i,i+needle.length()).equals(needle)){
+            return i;
+        }       
+        }
+        return -1;
     }
 }
 ```
