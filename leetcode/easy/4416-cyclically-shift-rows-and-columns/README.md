@@ -52,8 +52,8 @@ The `grid` changes as follows:
 
 **Language:** Java  
 **Runtime:** 1 ms (beats 100.00%)  
-**Memory:** 47.4 MB  
-**Submitted:** 2026-09-13T03:22:54.841Z  
+**Memory:** 47.5 MB  
+**Submitted:** 2026-09-13T03:34:42.022Z  
 
 ```java
 class Solution {
