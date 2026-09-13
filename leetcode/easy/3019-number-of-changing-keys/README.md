@@ -46,8 +46,8 @@ Explanation: There is no change of key since only the letters 'a' and 'A' are pr
 
 **Language:** Java  
 **Runtime:** 1 ms (beats 99.93%)  
-**Memory:** 43.3 MB (beats 80.92%)  
-**Submitted:** 2026-09-13T14:36:55.153Z  
+**Memory:** 43.4 MB (beats 66.34%)  
+**Submitted:** 2026-09-13T14:37:11.518Z  
 
 ```java
 class Solution {
