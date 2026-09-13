@@ -39,31 +39,29 @@ You must implement a solution with a linear runtime complexity and use only co
 ## Solution
 
 **Language:** Java  
-**Runtime:** 11 ms (beats 23.60%)  
-**Memory:** 46.7 MB (beats 91.91%)  
-**Submitted:** 2026-09-12T04:18:57.278Z  
+**Runtime:** 1 ms (beats 99.94%)  
+**Memory:** 46.9 MB (beats 64.85%)  
+**Submitted:** 2026-09-13T12:30:21.136Z  
 
 ```java
 class Solution {
     public int singleNumber(int[] nums) {
-        Arrays.sort(nums);
-        int n = nums.length;
-
-    
-        if (n == 1) return nums[0];
-
-       
-        if (nums[0] != nums[1]) return nums[0];
-
-       
-        for (int i = 1; i < n - 1; i++) {
-            if (nums[i] != nums[i - 1] && nums[i] != nums[i + 1]) {
-                return nums[i];
-            }
+        // Arrays.sort(nums);
+        // int n = nums.length;
+         // if (n == 1) return nums[0];
+        // if (nums[0] != nums[1]) return nums[0];
+        // for (int i = 1; i < n - 1; i++) {
+        //     if (nums[i] != nums[i - 1] && nums[i] != nums[i + 1]) {
+        //         return nums[i];
+        //     }
+        // }
+        // return nums[n - 1];
+        int unique = 0;
+        for(int i=0;i<nums.length;i++){
+            unique ^= nums[i];
         }
-
-      
-        return nums[n - 1];
+        return unique;
+        
     }
 }
 ```
