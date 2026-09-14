@@ -26,16 +26,15 @@ Explanation:  If we reverse it, we get [5, 4, 3, 2, 1] which is the not same as 
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-10T01:40:26.355Z  
+**Submitted:** 2026-09-14T09:42:16.273Z  
 
 ```java
 class Solution {
     public static boolean isPalindrome(int[] arr) {
-        // code here
-        int left = 0;
+        int left = 0;;
         int right = arr.length-1;
         
-        while(left<right){
+        while(left<=right){
             if(arr[left] != arr[right]){
                 return false;
             }
@@ -43,6 +42,7 @@ class Solution {
             right--;
         }
         return true;
+        
     }
 }
 
