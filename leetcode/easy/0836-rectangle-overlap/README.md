@@ -48,9 +48,9 @@ Output: false
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.6 MB  
-**Submitted:** 2026-09-14T03:15:34.138Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 42.9 MB (beats 17.64%)  
+**Submitted:** 2026-09-14T03:16:00.012Z  
 
 ```java
 class Solution {
@@ -58,7 +58,7 @@ class Solution {
         int x1 = rec1[0],y1=rec1[1],x2=rec1[2],y2=rec1[3];
         int x3 = rec2[0],y3=rec2[1],x4=rec2[2],y4=rec2[3];
 
-        return (x3>=x2)||(y4<=y1)||(x4<=x1)||(y3>=y2);
+        return !((x3>=x2)||(y4<=y1)||(x4<=x1)||(y3>=y2));
     }
 }
 ```
