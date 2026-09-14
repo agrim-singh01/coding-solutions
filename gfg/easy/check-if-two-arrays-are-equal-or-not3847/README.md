@@ -28,16 +28,16 @@ Explanation: a[] and b[] have only one common value.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-10T01:44:05.396Z  
+**Submitted:** 2026-09-14T09:44:06.811Z  
 
 ```java
 class Solution {
     public static boolean checkEqual(int[] a, int[] b) {
-        // code here
         Arrays.sort(a);
         Arrays.sort(b);
         
         return Arrays.equals(a,b);
+        
     }
 }
 ```
