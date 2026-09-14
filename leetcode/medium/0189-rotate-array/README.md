@@ -49,9 +49,9 @@ rotate 2 steps to the right: [3,99,-1,-100]
 ## Solution
 
 **Language:** Java  
-**Runtime:** 7 ms (beats 8.43%)  
-**Memory:** 273.4 MB (beats 5.48%)  
-**Submitted:** 2026-09-14T13:18:33.921Z  
+**Runtime:** 4 ms (beats 48.95%)  
+**Memory:** 268.5 MB (beats 33.93%)  
+**Submitted:** 2026-09-14T15:15:23.688Z  
 
 ```java
 class Solution {
@@ -69,18 +69,40 @@ class Solution {
     ////////////////////////////////////////////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////////////////////////////////////////////////
     //Method-2-Auxillary array placement
+    // int n = nums.length;
+    // int[] tempArray = new int[n];
+    // for(int i=0;i<n;i++){
+    //     int futureindex = (i+k)%n;
+    //     tempArray[futureindex] = nums[i];
+    // }
+    // for(int i=0;i<n;i++){
+    //     nums[i] = tempArray[i];
+    // }
+    //////////////////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////
+
+    //Method-3:-The reversal Algorithm
     int n = nums.length;
-    int[] tempArray = new int[n];
-    for(int i=0;i<n;i++){
-        int futureindex = (i+k)%n;
-        tempArray[futureindex] = nums[i];
+    if (nums == null || nums.length == 0) {
+            return;
+        }
+    k = k % n;
+    reverse(nums,0,n-1);
+    reverse(nums,0,k-1);
+    reverse(nums,k,n-1);
     }
-    for(int i=0;i<n;i++){
-        nums[i] = tempArray[i];
+
+    private void reverse(int[] nums,int start,int end){
+        while(start<end){
+        int temp = nums[start];
+        nums[start] = nums[end];
+        nums[end]=  temp;
+        start++;
+        end--;
+        }
     }
-    
     }
-}
+
 ```
 
 ---
