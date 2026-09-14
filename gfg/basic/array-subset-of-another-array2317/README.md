@@ -31,29 +31,30 @@ Explanation: b[] is not a subset of a[]
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-10T01:54:17.178Z  
+**Submitted:** 2026-09-14T09:57:25.157Z  
 
 ```java
 
 class Solution {
     public boolean isSubset(int a[], int b[]) {
-        // code here
-        Arrays.sort(a);
-        Arrays.sort(b);
-        
-        int i =0,j=0;
-        while(i <a.length && j<b.length){
-            if(a[i] == b[j]){
-                i++;
-                j++;
-            }
-           else if(a[i] < b[j]){
-                i++;
-            }else{
-                return false;
-            }
+    Arrays.sort(a);
+    Arrays.sort(b);
+    
+    int i=0;
+    int j=0;
+    
+    while(i<a.length && j<b.length){
+        if(a[i] == b[j]){
+            i++;
+            j++;
+        }else if(a[i]<b[j]){
+            i++;
+        }else{
+            return false;
         }
-       return j == b.length;
+    }
+    return j == b.length;
+        
     }
 }
 
