@@ -47,9 +47,9 @@ Explanation: 4 boats (3), (3), (4), (5)
 ## Solution
 
 **Language:** Java  
-**Runtime:** 2 ms  
-**Memory:** 42.2 MB  
-**Submitted:** 2026-09-16T04:24:53.295Z  
+**Runtime:** 22 ms (beats 22.65%)  
+**Memory:** 56.5 MB (beats 57.63%)  
+**Submitted:** 2026-09-16T04:24:59.900Z  
 
 ```java
 class Solution {
