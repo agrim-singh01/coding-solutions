@@ -47,9 +47,9 @@ Explanation: 4 boats (3), (3), (4), (5)
 ## Solution
 
 **Language:** Java  
-**Runtime:** 21 ms (beats 22.65%)  
-**Memory:** 56.2 MB (beats 94.11%)  
-**Submitted:** 2026-09-16T04:24:21.194Z  
+**Runtime:** 2 ms  
+**Memory:** 42.2 MB  
+**Submitted:** 2026-09-16T04:24:53.295Z  
 
 ```java
 class Solution {
@@ -61,12 +61,9 @@ class Solution {
         int right = n-1;
         while(left<=right){
             if(people[left]+people[right]<=limit){
-                left++;
-               
+                left++;  
             }
                 right--;
-                
-            
             boat++;
         }
         return boat;
