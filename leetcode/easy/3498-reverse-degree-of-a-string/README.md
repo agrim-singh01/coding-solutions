@@ -57,25 +57,22 @@ The reverse degree is `1 + 52 + 3 + 104 = 160`.
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.7 MB  
-**Submitted:** 2026-09-20T11:23:29.374Z  
+**Memory:** 42.5 MB  
+**Submitted:** 2026-09-20T11:27:51.159Z  
 
 ```java
 class Solution {
     public int reverseDegree(String s) {
-        int value=0,sum=0;
+        long sum=0;
         for(int i=0;i<s.length();i++){
            char ch =  s.charAt(i);
            if(ch>='a'&&ch<='z'){
-             value = 26 - (ch - 'a');
-              sum+=value;
+             sum += 26 - (ch - 'a');
+             
            }
           
         }
-        // for(int i=0;i<s.length();i++){
-        //     sum+=value;
-        // }
-        return sum;
+        return (int)sum;
     }
 }
 ```
