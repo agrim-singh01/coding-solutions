@@ -27,17 +27,17 @@ Explanation: GCD of 60 and 36 is 12
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-24T03:02:49.244Z  
+**Submitted:** 2026-09-24T07:12:01.840Z  
 
 ```java
 class Solution {
-    static int gc(int a,int b){
-        if(b==0) return a;
-        return gc(b,a%b);
-    }
     public static int gcd(int a, int b) {
-   return gc(a,b);
-        
+        while(b>0){
+        int temp = b;
+        b = a % b;
+        a = temp;
+        }        
+        return a;
     }
 }
 
