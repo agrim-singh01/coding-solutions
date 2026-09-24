@@ -49,19 +49,20 @@ Hence, `GCD(sumOdd, sumEven) = GCD(25, 30) = 5`.
 
 **Language:** Java  
 **Runtime:** 1 ms (beats 77.81%)  
-**Memory:** 42.7 MB (beats 21.07%)  
-**Submitted:** 2026-09-24T03:23:42.711Z  
+**Memory:** 42.5 MB (beats 58.12%)  
+**Submitted:** 2026-09-24T03:24:45.463Z  
 
 ```java
 class Solution {
-    int gcd(int a,int b){
-        if(b == 0) return a;
-        return gcd(b,a%b);
-    }
+    // int gcd(int a,int b){
+    //     // if(b == 0) return a;
+    //     // return gcd(b,a%b);
+    // }
     public int gcdOfOddEvenSums(int n) {
-        int oddsum = n*n;
-        int evensum = n*(n+1);
-      return  gcd(oddsum,evensum);
+    //     int oddsum = n*n;
+    //     int evensum = n*(n+1);
+    //   return  gcd(oddsum,evensum);
+    return n;
     }
 }
 ```
