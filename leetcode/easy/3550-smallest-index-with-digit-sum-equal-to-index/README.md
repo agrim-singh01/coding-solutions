@@ -55,22 +55,23 @@ If no such index exists, return `-1`.
 
 **Language:** Java  
 **Runtime:** 1 ms (beats 99.69%)  
-**Memory:** 45.4 MB (beats 89.71%)  
-**Submitted:** 2026-09-24T02:36:32.868Z  
+**Memory:** 45.6 MB (beats 40.74%)  
+**Submitted:** 2026-09-24T02:37:56.185Z  
 
 ```java
 class Solution {
     public int smallestIndex(int[] nums) {
       
       for(int i=0;i<nums.length;i++){
-        int dsum = 0;
         int n = nums[i];
+        int sum = 0;
+        
         while(n>0){
             int digit = n % 10;
-            dsum+=digit;
+            sum+=digit;
             n = n/10;
         }
-        if(dsum == i){
+        if(sum == i){
             return i;
         }
       }  
