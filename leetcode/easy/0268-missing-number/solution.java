@@ -1,11 +1,15 @@
 class Solution {
-    public int missingNumber(int[] nums) {
-        int n = nums.length;
-        int getSum = n*(n+1)/2;
-        int orgSum = 0;
-        for(int i=0;i<nums.length;i++){
-            orgSum += nums[i];
+    public void moveZeroes(int[] nums) {
+        int k = 0;
+       for(int i = 0;i<nums.length;i++){
+        if(nums[i] != 0){
+            nums[k] = nums[i];
+            k++;
         }
-        return getSum - orgSum;
+       } 
+       while(k < nums.length){
+        nums[k] = 0;
+        k++;
+       }
     }
 }
