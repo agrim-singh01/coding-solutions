@@ -48,23 +48,21 @@ Explanation: 1248 is divisible by all of its digits, hence the answer is 4.
 
 **Language:** Java  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 42.3 MB (beats 17.78%)  
-**Submitted:** 2026-09-08T02:13:27.549Z  
+**Memory:** 42.2 MB (beats 17.75%)  
+**Submitted:** 2026-10-03T10:50:14.722Z  
 
 ```java
 class Solution {
     public int countDigits(int num) {
-        int count = 0;
-        int temp = num;
-       while(temp > 0){
-        int digit = temp % 10;
-       
-         if(num % digit == 0){
-            count++;
-         }
-           temp = temp/10;
-       } 
-       return count;
+        int count=0,temp = num;
+while(temp>0){
+    int digit = temp % 10;
+    if(num % digit == 0){
+        count++;
+    }
+    temp /= 10;
+}
+return count;
     }
 }
 ```
