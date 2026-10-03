@@ -43,25 +43,14 @@ Output: "lovely"
 
 **Language:** Java  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 42.9 MB (beats 51.66%)  
-**Submitted:** 2026-09-13T04:31:40.422Z  
+**Memory:** 42.8 MB (beats 69.07%)  
+**Submitted:** 2026-10-03T11:11:09.673Z  
 
 ```java
 class Solution {
     public String toLowerCase(String s) {
-    //    StringBuilder sb = new StringBuilder();
-    //    for(int i=0;i<s.length();i++){
-    //     char ch = s.charAt(i);
-    //     if(Character.isUpperCase(ch)){
-    //         sb.append(Character.toLowerCase(ch));
-    //     }else{
-    //         sb.append(ch);
-    //     }
-    //    }
-    //    return sb.toString();
-   // String str = s.toLowerCase();
-    return s.toLowerCase();
-           }
+       return s.toLowerCase(); 
+    }
 }
 ```
 
