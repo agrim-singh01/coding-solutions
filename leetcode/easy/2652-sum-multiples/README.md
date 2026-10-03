@@ -46,25 +46,20 @@ Explanation: Numbers in the range [1, 9] that are divisible by 3, 5, or 7 are 3,
 ## Solution
 
 **Language:** Java  
-**Runtime:** 3 ms (beats 93.64%)  
-**Memory:** 42.7 MB (beats 23.13%)  
-**Submitted:** 2026-09-13T04:30:12.924Z  
+**Runtime:** 3 ms (beats 93.07%)  
+**Memory:** 42.9 MB (beats 8.54%)  
+**Submitted:** 2026-10-03T11:09:31.312Z  
 
 ```java
 class Solution {
     public int sumOfMultiples(int n) {
-        int sum1 = 0,sum2=0,sum3=0;
+        int sum=0;
         for(int i=1;i<=n;i++){
-            if(i % 3 == 0){
-                sum1 += i;
-            }else if(i % 5 == 0){
-                sum2 += i;
-            }else if(i % 7 == 0){
-                sum3 += i;
+            if(i % 3==0 || i % 5 ==0 || i % 7 == 0 ){
+                sum+=i;
             }
-
         }
-        return sum1+sum2+sum3;
+        return sum;
     }
 }
 ```
