@@ -46,9 +46,9 @@ Output: 4
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 41.7 MB  
-**Submitted:** 2026-11-06T10:08:35.397Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 44.5 MB (beats 71.82%)  
+**Submitted:** 2026-11-06T10:09:17.064Z  
 
 ```java
 class Solution {
@@ -59,7 +59,7 @@ class Solution {
             int mid = low + (high-low)/2;
             if(nums[mid] == target){
 return mid;
-            }else if(nums[mid]<target){
+            }else if(nums[mid]>target){
                 high = mid-1;
             }else{
                 low = mid + 1;
