@@ -40,23 +40,23 @@ Explanation: 2 does not exist in nums so return -1
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 48.2 MB (beats 69.26%)  
-**Submitted:** 2026-09-16T03:30:27.191Z  
+**Runtime:** 0 ms  
+**Memory:** 40.8 MB  
+**Submitted:** 2026-11-06T09:50:43.612Z  
 
 ```java
 class Solution {
     public int search(int[] nums, int target) {
-        int low =  0;
-        int high = nums.length-1;
+        int low = 0;
+        int high = nums.length - 1;
         while(low<=high){
-            int mid=low+(high-low)/2;
-            if(nums[mid] == target){
+            int mid = low + (high-low)/2;
+            if(target == nums[mid] ){
                 return mid;
-            }else if(nums[mid]<target){
-                low=mid+1;
+            }else if(target < mid){
+                high = mid -1;
             }else{
-                high = mid-1;
+                low = mid+1;
             }
         }
         return -1;
