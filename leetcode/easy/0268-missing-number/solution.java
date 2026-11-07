@@ -1,15 +1,11 @@
 class Solution {
-    public void moveZeroes(int[] nums) {
-        int k = 0;
-       for(int i = 0;i<nums.length;i++){
-        if(nums[i] != 0){
-            nums[k] = nums[i];
-            k++;
+    public int missingNumber(int[] nums) {
+        int n = nums.length;
+        int sum = n*(n+1)/2;
+        int org = 0;
+        for(int i=0;i<nums.length;i++){
+            org+=nums[i];
         }
-       } 
-       while(k < nums.length){
-        nums[k] = 0;
-        k++;
-       }
+        return sum-org;
     }
 }
