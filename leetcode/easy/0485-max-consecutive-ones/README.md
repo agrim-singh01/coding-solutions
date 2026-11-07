@@ -35,26 +35,26 @@ Output: 2
 ## Solution
 
 **Language:** Java  
-**Runtime:** 2 ms (beats 98.27%)  
-**Memory:** 52.7 MB (beats 26.34%)  
-**Submitted:** 2026-09-05T02:39:04.600Z  
+**Runtime:** 3 ms (beats 58.87%)  
+**Memory:** 52.4 MB (beats 49.91%)  
+**Submitted:** 2026-11-07T18:36:03.510Z  
 
 ```java
 class Solution {
     public int findMaxConsecutiveOnes(int[] nums) {
-        int c = 0;
-        int mc = 0;
+        int count=0;
+        int max = 0;
         for(int i=0;i<nums.length;i++){
-            if(nums[i] == 1){
-                c++;
+            if(nums[i]==1){
+                count++;
             }else{
-                c = 0;
+                count = 0;
             }
-            if(mc < c){
-                mc = c;
+            if(max<count){
+                max = count;
             }
         }
-        return mc;
+        return max;
     }
 }
 ```
