@@ -61,9 +61,9 @@ Given an array `nums` containing `n` distinct numbers in the range `[0, n]`, ret
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 46.8 MB (beats 90.31%)  
-**Submitted:** 2026-11-07T18:50:23.821Z  
+**Runtime:** 0 ms  
+**Memory:** 41.9 MB  
+**Submitted:** 2026-11-07T18:50:56.839Z  
 
 ```java
 class Solution {
