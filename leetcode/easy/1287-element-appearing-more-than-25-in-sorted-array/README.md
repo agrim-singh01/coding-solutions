@@ -34,25 +34,16 @@ Output: 1
 ## Solution
 
 **Language:** Java  
-**Runtime:** 1 ms (beats 69.58%)  
-**Memory:** 45.7 MB (beats 89.40%)  
-**Submitted:** 2026-11-08T07:03:13.678Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 45.4 MB (beats 99.12%)  
+**Submitted:** 2026-11-08T07:19:58.400Z  
 
 ```java
 class Solution {
     public int findSpecialInteger(int[] arr) {
         int target = arr.length/4;
-        int curr = 1;
-        if(curr>target){
-            return arr[0];
-        }
-        for(int i=1;i<arr.length;i++){
-            if(arr[i]==arr[i-1]){
-                curr++;
-            }else{
-                curr = 1;
-            }
-            if(curr>target){
+        for(int i=0;i<arr.length-target;i++){
+            if(arr[i] == arr[i+target]){
                 return arr[i];
             }
         }
