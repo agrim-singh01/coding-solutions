@@ -1,14 +1,17 @@
 class Solution {
     public int findSpecialInteger(int[] arr) {
-        double max = 0.25*arr.length;
-        for(int i=0;i<arr.length;i++){
-            int count=0;
-            for(int j=0;j<arr.length;j++){
-                if(arr[i]==arr[j]){
-                    count++;
-                }
+        int target = arr.length/4;
+        int curr = 1;
+        if(curr>target){
+            return arr[0];
+        }
+        for(int i=1;i<arr.length;i++){
+            if(arr[i]==arr[i-1]){
+                curr++;
+            }else{
+                curr = 1;
             }
-            if(count>max){
+            if(curr>target){
                 return arr[i];
             }
         }
