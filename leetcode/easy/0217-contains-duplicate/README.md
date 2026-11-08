@@ -46,18 +46,18 @@ All elements are distinct.
 **Language:** Java  
 **Runtime:** 24 ms (beats 27.73%)  
 **Memory:** 81.2 MB (beats 94.87%)  
-**Submitted:** 2026-11-08T08:09:25.478Z  
+**Submitted:** 2026-11-08T09:05:08.194Z  
 
 ```java
 class Solution {
     public boolean containsDuplicate(int[] nums) {
-       Arrays.sort(nums);
-       for(int i=1;i<nums.length;i++){
-        if(nums[i]==nums[i-1]){
-            return true;
+        Arrays.sort(nums);
+        for(int i=1;i<nums.length;i++){
+            if(nums[i]==nums[i-1]){
+                return true;
+            }
         }
-       } 
-       return false;
+        return false;
     }
 }
 ```
