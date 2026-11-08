@@ -41,19 +41,24 @@ Your task is to solve it in `O(log(n))` time complexity.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 2 ms (beats 7.30%)  
-**Memory:** 79.7 MB (beats 91.60%)  
-**Submitted:** 2026-11-08T06:23:54.126Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 79.9 MB (beats 79.49%)  
+**Submitted:** 2026-11-08T06:27:21.041Z  
 
 ```java
 class Solution {
     public int peakIndexInMountainArray(int[] arr) {
-        for(int i=0;i<=arr.length-2;i++){
-            if(arr[i]>arr[i+1]){
-                return i;
+        int left=0;
+        int right = arr.length-1;
+        while(left<right){
+            int mid=left+(right-left)/2;
+            if(arr[mid]<arr[mid+1]){
+                left=mid+1;
+            }else{
+                right = mid;
             }
         }
-        return -1;
+        return right;
     }
 }
 ```
