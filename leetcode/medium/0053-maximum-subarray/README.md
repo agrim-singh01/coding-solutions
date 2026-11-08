@@ -49,9 +49,9 @@ Explanation: The subarray [5,4,-1,7,8] has the largest sum 23.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 41.8 MB  
-**Submitted:** 2026-11-08T17:52:46.395Z  
+**Runtime:** 1 ms (beats 99.96%)  
+**Memory:** 76.6 MB (beats 88.42%)  
+**Submitted:** 2026-11-08T17:54:25.874Z  
 
 ```java
 class Solution {
@@ -60,7 +60,7 @@ class Solution {
         int max = Integer.MIN_VALUE;
 
         for(int i=0;i<nums.length;i++){
-          curr =  Math.max(curr,nums[i]);
+          curr =  Math.max(nums[i],(curr+nums[i]));
           if(max<curr){
             max=curr;
           }
