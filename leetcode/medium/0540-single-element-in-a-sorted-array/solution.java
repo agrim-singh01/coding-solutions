@@ -10,9 +10,8 @@ class Solution {
         if(nums[n-1] != nums[n-2]){
             return nums[n-1];
         }
-        int curr=1;
         for(int i=1;i<nums.length-1;i++){
-             if(nums[i]!=nums[i-1] && nums[i]!=nums[i+1]){
+            if(nums[i] != nums[i-1] && nums[i] != nums[i+1]){
                 return nums[i];
             }
         }
