@@ -38,9 +38,9 @@ Output: 10
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 40.9 MB  
-**Submitted:** 2026-11-09T20:31:19.427Z  
+**Runtime:** 1 ms (beats 21.27%)  
+**Memory:** 52.4 MB (beats 79.34%)  
+**Submitted:** 2026-11-09T20:31:25.442Z  
 
 ```java
 class Solution {
