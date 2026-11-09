@@ -47,25 +47,25 @@ Output: 4
 
 **Language:** Java  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 44.5 MB (beats 71.82%)  
-**Submitted:** 2026-11-06T10:09:17.064Z  
+**Memory:** 44.2 MB (beats 81.97%)  
+**Submitted:** 2026-11-09T19:56:17.740Z  
 
 ```java
 class Solution {
     public int searchInsert(int[] nums, int target) {
-        int low = 0;
-        int high = nums.length - 1;
-        while(low<=high){
-            int mid = low + (high-low)/2;
-            if(nums[mid] == target){
-return mid;
-            }else if(nums[mid]>target){
-                high = mid-1;
-            }else{
-                low = mid + 1;
-            }
+        int left = 0;
+        int right = nums.length-1;
+        while(left<=right){
+            int mid=left+(right-left)/2;
+            if(nums[mid]==target){
+                 return mid;
+                 }else if(nums[mid]<target){
+                    left=mid+1;
+                 }else{
+                    right=mid-1;
+                 }
         }
-        return low;
+        return left;
     }
 }
 ```
