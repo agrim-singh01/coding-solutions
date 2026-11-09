@@ -25,22 +25,23 @@ Explanation: After rotating clock-wise 3 comes in first position.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-09T18:20:39.002Z  
+**Submitted:** 2026-11-09T18:52:57.335Z  
 
 ```java
 class Solution {
     public void rotate(int[] arr) {
-//int first = arr[0];
-int last = arr[arr.length-1];
-// for(int i=1;i<arr.length;i++){
-//     arr[i-1]=arr[i];
-   
-// }
-//  arr[arr.length-1] = first;
-for(int i=arr.length-1;i>0;i--){
-    arr[i] = arr[i-1];
-}
-      arr[0]=last;  
+        // int first = arr[0];
+        // for(int i=1;i<arr.length;i++){
+        //     arr[i-1]=arr[i];
+        // }
+        // arr[arr.length-1]=first;
+        
+        int last = arr[arr.length-1];
+        for(int i=arr.length-1;i>0;i--){
+            arr[i]=arr[i-1];
+        }
+        arr[0] = last;
+        
     }
 }
 ```
