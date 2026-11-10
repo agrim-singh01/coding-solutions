@@ -56,23 +56,31 @@ Output: 3
 ## Solution
 
 **Language:** Java  
-**Runtime:** 38 ms (beats 11.01%)  
-**Memory:** 78.3 MB (beats 99.69%)  
-**Submitted:** 2026-11-10T18:44:08.977Z  
+**Runtime:** 23 ms (beats 21.81%)  
+**Memory:** 82.2 MB (beats 84.00%)  
+**Submitted:** 2026-11-10T18:58:53.854Z  
 
 ```java
 class Solution {
     public int findDuplicate(int[] nums) {
-        Arrays.sort(nums);
-        if(nums.length == 1){
-            return nums[0];
-        }
-        for(int i=1;i<nums.length;i++){
-            if(nums[i-1] == nums[i]){
-                return nums[i];
+        int left = 1;
+        int right = nums.length-1;
+
+        while(left<right){
+            int mid = left+(right-left)/2;
+int count = 0;
+            for(int i=0;i<nums.length;i++){
+                if(nums[i]<=mid){
+                    count++;
+                }
+            }
+            if(count > mid){
+                right = mid;
+            }else{
+                left=mid+1;
             }
         }
-        return -1;
+        return right;
     }
 }
 ```
