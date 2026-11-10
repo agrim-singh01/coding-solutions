@@ -56,9 +56,9 @@ Output: 3
 ## Solution
 
 **Language:** Java  
-**Runtime:** 23 ms (beats 21.81%)  
-**Memory:** 82.2 MB (beats 84.00%)  
-**Submitted:** 2026-11-10T18:58:53.854Z  
+**Runtime:** 22 ms (beats 27.08%)  
+**Memory:** 82.3 MB (beats 81.13%)  
+**Submitted:** 2026-11-10T20:13:54.587Z  
 
 ```java
 class Solution {
@@ -68,14 +68,14 @@ class Solution {
 
         while(left<right){
             int mid = left+(right-left)/2;
-int count = 0;
+            int count = 0;
             for(int i=0;i<nums.length;i++){
                 if(nums[i]<=mid){
                     count++;
                 }
             }
-            if(count > mid){
-                right = mid;
+            if(count>mid){
+                right=mid;
             }else{
                 left=mid+1;
             }
