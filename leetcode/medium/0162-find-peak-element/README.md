@@ -14,6 +14,8 @@ You must write an algorithm that runs in `O(log n)` time.
 
  
 
+Original
+Java
  **Example 1:** 
 
 ```
@@ -42,26 +44,29 @@ Explanation: Your function can return either index number 1 where the peak eleme
 
 **Language:** Java  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 43.9 MB (beats 65.88%)  
-**Submitted:** 2026-11-07T18:20:09.289Z  
+**Memory:** 43.9 MB (beats 71.35%)  
+**Submitted:** 2026-11-10T14:40:12.588Z  
 
 ```java
 class Solution {
     public int findPeakElement(int[] nums) {
-        int left = 0;
-        int right = nums.length-1;
-        while(left<right){
-            int mid = left + (right-left)/2;
-
-            if(nums[mid] > nums[mid+1]){
-                right=mid;            
-        }else{
-            left=mid+1;
+        int n = nums.length;
+        if(n == 1){
+            return 0;
         }
+        if(nums[0] > nums[1]){
+            return 0;
         }
-        return right;
-        
-    }  
+        if(nums[n-1] > nums[n-2]){
+            return (n-1);
+        }
+        for(int i=1;i<n-1;i++){
+            if((nums[i] > nums[i-1]) && (nums[i] > nums[i+1])){
+                return i;
+            }
+        }
+        return -1;
+    }
 }
 ```
 
