@@ -65,16 +65,19 @@ It is obvious that we can make two bouquets in different ways.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 16 ms (beats 91.67%)  
-**Memory:** 82.4 MB (beats 58.37%)  
-**Submitted:** 2026-11-10T19:39:09.205Z  
+**Runtime:** 17 ms (beats 71.13%)  
+**Memory:** 82 MB (beats 92.58%)  
+**Submitted:** 2026-11-10T20:09:04.674Z  
 
 ```java
 class Solution {
     public int minDays(int[] bloomDay, int m, int k) {
+        if((long)m*k > bloomDay.length){
+            return -1;
+        }
         int left = Integer.MAX_VALUE;
         int right = 0;
-        if((long)m*k > bloomDay.length) return -1;
+
         for(int i=0;i<bloomDay.length;i++){
             if(left>bloomDay[i]){
                 left=bloomDay[i];
@@ -83,31 +86,33 @@ class Solution {
                 right=bloomDay[i];
             }
         }
-        while(left<right){
-            int mid = left + (right-left)/2;
+        int result = right;
+        while(left<=right){
+            int mid = left+(right-left)/2;
 
-            int boq=0,currflower=0;
-
+            int currflower = 0;
+            int boq = 0;
+            
             for(int i=0;i<bloomDay.length;i++){
                 if(bloomDay[i]<=mid){
                     currflower++;
-                    
-                    if(currflower >= k){
+                    if(currflower == k){
                         boq++;
-                        currflower=0;
+                        currflower = 0;
                     }
                 }else{
                     currflower=0;
                 }
             }
-            if(boq>=m){
-                 right=mid;
+            if(boq >= m){
+                right=mid-1;
+                result = mid;
             }else{
                 left=mid+1;
-               
-            }
-        }
-        return right;
+            } 
+                   }
+                   return result;
+         
     }
 }
 ```
