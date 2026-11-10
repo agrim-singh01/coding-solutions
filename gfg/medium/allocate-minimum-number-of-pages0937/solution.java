@@ -1,43 +1,35 @@
 class Solution {
     public int findPages(int[] arr, int k) {
-        // code here
-        if(k>arr.length){
-            return -1;
-        }
-        long low=0;
-        long high=0;
-
-
-        for(int page:arr){
-            low=Math.max(low,page);
-            high+=page;
-        }
-        long ans=0;
-        while(low<=high){
-            long mid=low+(high-low)/2;
-            if(ispossible(arr,k,mid)){
-               ans=mid;
-               high=mid-1;
-            }else{
-                low=mid+1;
+        long left = 0;
+        long right=0;
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]>left){
+                left=arr[i];
             }
-
-
+            right+=arr[i];
         }
-        return (int)ans;
-    }
-    private boolean ispossible(int []arr, int k , long maxpages){
-        int student =1;
-        int curpage=0;
-        for(int pages:arr){
-            if(curpage+pages<=maxpages){
-                curpage+=pages;
+        if(arr.length<k) return -1;
+        
+        while(left<right){
+            long mid = left+(right-left)/2;
+            
+            int curr = 0;
+            int book = 1;
+            
+            for(int i=0;i<arr.length;i++){
+                if(curr+arr[i] > mid){
+                    book++;
+                    curr=0;
+                }
+                curr+=arr[i];
+            }
+            if(book<=k){
+                right=mid;
             }else{
-                student++;
-                curpage=pages;
-                if(student>k)return false;
+                left=mid+1;
             }
         }
-        return true;
+        return (int)left;
+        
     }
 }
