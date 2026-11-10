@@ -43,9 +43,9 @@ Output: 44
 ## Solution
 
 **Language:** Java  
-**Runtime:** 7 ms (beats 82.28%)  
-**Memory:** 50.8 MB (beats 61.78%)  
-**Submitted:** 2026-11-10T21:48:44.431Z  
+**Runtime:** 6 ms (beats 99.20%)  
+**Memory:** 50.7 MB (beats 69.39%)  
+**Submitted:** 2026-11-10T21:49:59.311Z  
 
 ```java
 class Solution {
@@ -57,19 +57,21 @@ class Solution {
                 right=nums[i];
             }
         }
-        while(left<right){
+        int ans = -1;
+        while(left<=right){
             int mid = left+(right-left)/2;
             long thres = 0;
             for(int i=0;i<nums.length;i++){
                 thres+=(nums[i]+mid-1)/mid;
             }
             if(thres<=threshold){
-                right=mid;
+                right=mid-1;
+                ans = mid;
             }else{
                 left=mid+1;
             }
         }
-        return right;
+        return ans;
     }
 }
 ```
