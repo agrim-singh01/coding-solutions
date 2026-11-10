@@ -60,17 +60,17 @@ Explanation: The original array was [11,13,15,17] and it was rotated 4 times.
 
 **Language:** Java  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 43.4 MB (beats 69.04%)  
-**Submitted:** 2026-11-10T12:50:20.437Z  
+**Memory:** 43.2 MB (beats 89.52%)  
+**Submitted:** 2026-11-10T13:00:24.395Z  
 
 ```java
 class Solution {
     public int findMin(int[] nums) {
-        int left=0;
-        int right=nums.length-1;
+        int left = 0;
+        int right = nums.length-1;
 
-        while(left<right){
-            int mid=left+(right-left)/2;
+        while(left < right){
+            int mid = left+(right-left)/2;
             if(nums[mid]>nums[right]){
                 left=mid+1;
             }else{
