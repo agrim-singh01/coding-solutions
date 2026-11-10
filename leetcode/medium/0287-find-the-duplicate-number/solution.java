@@ -5,14 +5,14 @@ class Solution {
 
         while(left<right){
             int mid = left+(right-left)/2;
-int count = 0;
+            int count = 0;
             for(int i=0;i<nums.length;i++){
                 if(nums[i]<=mid){
                     count++;
                 }
             }
-            if(count > mid){
-                right = mid;
+            if(count>mid){
+                right=mid;
             }else{
                 left=mid+1;
             }
