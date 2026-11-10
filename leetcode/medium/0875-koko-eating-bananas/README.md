@@ -51,9 +51,9 @@ Output: 23
 ## Solution
 
 **Language:** Java  
-**Runtime:** 7 ms (beats 88.15%)  
-**Memory:** 47.6 MB (beats 61.39%)  
-**Submitted:** 2026-11-10T16:52:04.041Z  
+**Runtime:** 9 ms (beats 60.59%)  
+**Memory:** 47.3 MB (beats 81.40%)  
+**Submitted:** 2026-11-10T16:52:36.454Z  
 
 ```java
 class Solution {
@@ -75,7 +75,7 @@ class Solution {
                 //     speed++;
                 // }
                 // thr+=speed;
-                thr += (piles[i]+k-1)/k;
+                thr += (long)(piles[i]+k-1)/k;
             }
             if(thr>h){
                 low=k+1;
