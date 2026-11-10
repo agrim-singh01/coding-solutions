@@ -14,6 +14,8 @@ Return  *the minimum integer*  `k`  *such that she can eat all the bananas withi
 
  
 
+Original
+Java
  **Example 1:** 
 
 ```
@@ -49,40 +51,38 @@ Output: 23
 ## Solution
 
 **Language:** Java  
-**Runtime:** 7 ms (beats 83.68%)  
-**Memory:** 48.8 MB (beats 5.74%)  
-**Submitted:** 2026-09-17T04:51:13.625Z  
+**Runtime:** 14 ms (beats 37.21%)  
+**Memory:** 47.3 MB (beats 81.40%)  
+**Submitted:** 2026-11-10T16:49:09.732Z  
 
 ```java
 class Solution {
     public int minEatingSpeed(int[] piles, int h) {
-        //Arrays.sort(piles);
         int low = 1;
-        int n = piles.length -1;
-        int max = Integer.MIN_VALUE;
-       // int ans = -1;
-        for(int i=0;i<=n;i++){
-        if(max<piles[i]){
-    max = piles[i];
-}
-        }     
-        int high = max;
-        while(low<high){
-            int mid = low+(high-low)/2;
-            int time=0;
-            for(int i=0;i<piles.length;i++){
-                time+=(piles[i]+mid-1)/mid;
+        int high = 0;
+
+        for(int i=0;i<piles.length;i++){
+            if(high<piles[i]){
+                high=piles[i];
             }
-            if(time>h){
-               low=mid+1;
-            }else{
-               high = mid;
-            }
-            // mid = low+(high-low)/2;
-        
         }
-        return low;
-        
+        while(low<high){
+            int k = low+(high-low)/2;
+            long thr=0;
+            for(int i=0;i<piles.length;i++){
+                int speed = piles[i]/k;
+                if(piles[i] % k != 0){
+                    speed++;
+                }
+                thr+=speed;
+            }
+            if(thr>h){
+                low=k+1;
+            }else{
+                high=k;
+            }
+        }
+        return high;
     }
 }
 ```
