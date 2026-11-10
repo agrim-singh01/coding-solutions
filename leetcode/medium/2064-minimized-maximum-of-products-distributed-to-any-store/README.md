@@ -64,9 +64,9 @@ The maximum number of products given to any store is max(100000) = 100000.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 33 ms (beats 48.67%)  
-**Memory:** 80.9 MB (beats 60.99%)  
-**Submitted:** 2026-11-10T20:37:24.370Z  
+**Runtime:** 32 ms (beats 48.77%)  
+**Memory:** 80.8 MB (beats 75.87%)  
+**Submitted:** 2026-11-10T20:37:56.633Z  
 
 ```java
 class Solution {
