@@ -60,8 +60,8 @@ Explanation: The original array was [11,13,15,17] and it was rotated 4 times.
 
 **Language:** Java  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 43.2 MB (beats 89.52%)  
-**Submitted:** 2026-11-10T13:00:24.395Z  
+**Memory:** 43.1 MB (beats 89.52%)  
+**Submitted:** 2026-11-10T13:01:45.319Z  
 
 ```java
 class Solution {
@@ -77,7 +77,7 @@ class Solution {
                 right=mid;
             }
         }
-        return nums[right];
+        return nums[left];
     }
 }
 ```
