@@ -52,8 +52,8 @@ Output: 0
 
 **Language:** Java  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 44.4 MB (beats 85.62%)  
-**Submitted:** 2026-11-10T14:21:49.992Z  
+**Memory:** 44.2 MB (beats 95.57%)  
+**Submitted:** 2026-11-10T14:26:33.386Z  
 
 ```java
 class Solution {
@@ -63,13 +63,14 @@ class Solution {
 
        while(left<right){
         int mid = left+(right-left)/2;
-
+ if( nums[right] == nums[mid]){
+            right--;
+            continue;
+        }
         if(nums[mid]>nums[right]){
             left=mid+1;
         }else if(nums[mid] < nums[right]){
             right=mid;
-        }else if(nums[mid]==nums[right]){
-            right--;
         }
        } 
        return nums[right];
