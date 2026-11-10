@@ -49,44 +49,46 @@ Output: [-1,-1]
 
 **Language:** Java  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 47.6 MB (beats 91.65%)  
-**Submitted:** 2026-11-06T17:33:24.343Z  
+**Memory:** 47.1 MB (beats 99.68%)  
+**Submitted:** 2026-11-10T08:46:59.638Z  
 
 ```java
 class Solution {
     public int[] searchRange(int[] nums, int target) {
-        int first = -1;
-        int last = -1;
+     int first = -1;
+     int last = -1;
 
-        //first position
-        int left = 0;
-        int right = nums.length-1;
-        while(left<=right){
-            int mid = left + (right-left)/2;
-            if(nums[mid] == target){
-                first = mid;
-                right = mid - 1;
-            }else if(nums[mid]<target){
-                left=mid+1;
-            }else{
-                right=mid-1;
-            }
+     int left = 0;
+     int right=nums.length-1;
+
+     while(left<=right){
+        int mid=left+(right-left)/2;
+        if(nums[mid]== target){
+            first=mid;
+            right=mid-1;
+        }else if(nums[mid]<target){
+            left=mid+1;
+        }else{
+            right=mid-1;
         }
-        //last position
-         left = 0;
-         right = nums.length-1;
-        while(left<=right){
-            int mid = left + (right-left)/2;
-            if(nums[mid] == target){
-                last = mid;
-                left = mid + 1;
-            }else if(nums[mid]<target){
-                left=mid+1;
-            }else{
-                right=mid-1;
-            }
+     }
+
+
+      left=0;
+      right=nums.length-1;
+
+     while(left<=right){
+        int mid=left+(right-left)/2;
+        if(nums[mid]==target){
+            last=mid;
+            left=mid+1;
+        }else if(nums[mid]>target){
+            right=mid-1;
+        }else{
+            left=mid+1;
         }
-        return new int[] {first,last};
+     }   
+     return new int[]{first,last};
     }
 }
 ```
