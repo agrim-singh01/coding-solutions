@@ -17,7 +17,7 @@ class Solution {
                 //     speed++;
                 // }
                 // thr+=speed;
-                thr += (piles[i]+k-1)/k;
+                thr += (long)(piles[i]+k-1)/k;
             }
             if(thr>h){
                 low=k+1;
