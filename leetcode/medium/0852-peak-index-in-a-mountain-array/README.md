@@ -12,6 +12,8 @@ Your task is to solve it in `O(log(n))` time complexity.
 
  
 
+Original
+Java
  **Example 1:** 
 
  **Input:**  arr = [0,1,0]
@@ -42,23 +44,23 @@ Your task is to solve it in `O(log(n))` time complexity.
 
 **Language:** Java  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 79.9 MB (beats 79.49%)  
-**Submitted:** 2026-11-08T06:27:21.041Z  
+**Memory:** 79.8 MB (beats 78.07%)  
+**Submitted:** 2026-11-10T14:57:24.325Z  
 
 ```java
 class Solution {
     public int peakIndexInMountainArray(int[] arr) {
-        int left=0;
+        int left = 0;
         int right = arr.length-1;
         while(left<right){
-            int mid=left+(right-left)/2;
+            int mid = left+(right-left)/2;
             if(arr[mid]<arr[mid+1]){
                 left=mid+1;
             }else{
-                right = mid;
+                right=mid;
             }
         }
-        return right;
+        return left;
     }
 }
 ```
