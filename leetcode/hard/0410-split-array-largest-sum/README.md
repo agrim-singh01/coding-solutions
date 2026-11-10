@@ -12,6 +12,8 @@ A  **subarray**  is a contiguous part of the array.
 
  
 
+Original
+Java
  **Example 1:** 
 
 ```
@@ -43,49 +45,41 @@ The best way is to split it into [1,2,3] and [4,5], where the largest sum among 
 ## Solution
 
 **Language:** Java  
-**Runtime:** 2 ms (beats 31.51%)  
-**Memory:** 43 MB (beats 50.70%)  
-**Submitted:** 2026-09-08T05:15:52.142Z  
+**Runtime:** 2 ms (beats 34.12%)  
+**Memory:** 42.6 MB (beats 73.39%)  
+**Submitted:** 2026-11-10T18:25:54.326Z  
 
 ```java
 class Solution {
     public int splitArray(int[] nums, int k) {
-        int low=0;
-        int high=0;
+        int left = 0;
+        int right = 0;
 
-        int sum=0;
-        int max=nums[0];
         for(int i=0;i<nums.length;i++){
-            if(nums[i]>max){
-                max=nums[i];
+            if(left<nums[i]){
+                left=nums[i];
             }
-            sum+=nums[i];
+            right+=nums[i];
         }
-        low=max;
-        high=sum;
-
-        while(low<high){
-            int mid=(low+high)/2;
-            int parts=1;
-            int currentsum=0;
-
-            for(int i=0;i<nums.length;i++){
-                if(currentsum+nums[i]>mid){
-                    parts++;
-                    currentsum=nums[i];
-                }
-                else{
-                    currentsum+=nums[i];
-                }
+    while(left<right){
+        int mid = left + (right-left)/2;
+        int currarr = 0;
+        int subcount = 1;
+        for(int i=0;i<nums.length;i++){
+            if(currarr + nums[i] > mid){
+                subcount++;
+                currarr=0;
             }
-            if(parts>k){
-                low=mid+1;
-            }
-            else{
-                high=mid;
-            }
+            currarr+=nums[i];
         }
-        return low;
+        if(subcount > k){
+            left=mid+1;
+        }else{
+            right=mid;
+        }
+    }
+    return right;
+
     }
 }
 ```
