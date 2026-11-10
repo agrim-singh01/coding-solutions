@@ -51,9 +51,9 @@ Output: 23
 ## Solution
 
 **Language:** Java  
-**Runtime:** 14 ms (beats 37.21%)  
-**Memory:** 47.3 MB (beats 81.40%)  
-**Submitted:** 2026-11-10T16:49:09.732Z  
+**Runtime:** 7 ms (beats 88.15%)  
+**Memory:** 47.6 MB (beats 61.39%)  
+**Submitted:** 2026-11-10T16:52:04.041Z  
 
 ```java
 class Solution {
@@ -70,11 +70,12 @@ class Solution {
             int k = low+(high-low)/2;
             long thr=0;
             for(int i=0;i<piles.length;i++){
-                int speed = piles[i]/k;
-                if(piles[i] % k != 0){
-                    speed++;
-                }
-                thr+=speed;
+                // int speed = piles[i]/k;
+                // if(piles[i] % k != 0){
+                //     speed++;
+                // }
+                // thr+=speed;
+                thr += (piles[i]+k-1)/k;
             }
             if(thr>h){
                 low=k+1;
