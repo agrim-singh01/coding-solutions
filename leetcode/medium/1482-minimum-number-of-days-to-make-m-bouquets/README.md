@@ -65,14 +65,14 @@ It is obvious that we can make two bouquets in different ways.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 17 ms (beats 71.13%)  
-**Memory:** 81.9 MB (beats 92.58%)  
-**Submitted:** 2026-11-10T19:36:14.350Z  
+**Runtime:** 16 ms (beats 91.67%)  
+**Memory:** 82.4 MB (beats 58.37%)  
+**Submitted:** 2026-11-10T19:39:09.205Z  
 
 ```java
 class Solution {
     public int minDays(int[] bloomDay, int m, int k) {
-        int left = 0;
+        int left = Integer.MAX_VALUE;
         int right = 0;
         if((long)m*k > bloomDay.length) return -1;
         for(int i=0;i<bloomDay.length;i++){
