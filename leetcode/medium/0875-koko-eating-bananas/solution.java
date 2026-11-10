@@ -12,11 +12,12 @@ class Solution {
             int k = low+(high-low)/2;
             long thr=0;
             for(int i=0;i<piles.length;i++){
-                int speed = piles[i]/k;
-                if(piles[i] % k != 0){
-                    speed++;
-                }
-                thr+=speed;
+                // int speed = piles[i]/k;
+                // if(piles[i] % k != 0){
+                //     speed++;
+                // }
+                // thr+=speed;
+                thr += (piles[i]+k-1)/k;
             }
             if(thr>h){
                 low=k+1;
