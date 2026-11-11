@@ -43,37 +43,38 @@ Explanation: There is only one painter, so the painter must paint all boards seq
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-10T23:12:06.784Z  
+**Submitted:** 2026-11-11T20:04:54.501Z  
 
 ```java
 class Solution {
     public int minTime(int[] arr, int k) {
-       int left = 0;
-       int right = 0;
-       for(int i=0;i<arr.length;i++){
-           if(left<arr[i]){
-               left=arr[i];
-           } 
-           right+=arr[i];
-       }
-       while(left<right){
-           int mid = left+(right-left)/2;
-           int curr=0;
-           int painter = 1;
-           for(int i=0;i<arr.length;i++){
-               if(curr+arr[i] > mid){
-                   painter++;
-                   curr=0;
-               }
-               curr+=arr[i];
-           }
-           if(painter<=k){
-               right=mid;
-           }else{
-               left=mid+1;
-           }
-       }
-       return right;
+      int left = Integer.MIN_VALUE;
+      int right=0;
+      for(int i=0;i<arr.length;i++){
+          if(left<arr[i]) {
+              left=arr[i];
+          }
+          right+=arr[i];
+      }
+      
+      while(left<right){
+          int mid = left+(right-left)/2;
+          
+          int curr=0,painter=1;
+          for(int i=0;i<arr.length;i++){
+              if(curr+arr[i]>mid){
+                  painter++;
+                  curr=0;
+              }
+              curr+=arr[i];
+          }
+          if(painter>k){
+              left=mid+1;
+          }else{
+              right=mid;
+          }
+      }
+      return right;
         
     }
 }
