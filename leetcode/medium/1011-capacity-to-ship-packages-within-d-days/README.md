@@ -65,41 +65,42 @@ Explanation:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 11 ms (beats 61.79%)  
-**Memory:** 49.5 MB (beats 90.93%)  
-**Submitted:** 2026-11-10T18:08:23.631Z  
+**Runtime:** 9 ms (beats 98.65%)  
+**Memory:** 49.4 MB (beats 97.16%)  
+**Submitted:** 2026-11-11T19:06:30.325Z  
 
 ```java
 class Solution {
     public int shipWithinDays(int[] weights, int days) {
-        int left = 0;
-        int right = 0;
+       int left = Integer.MIN_VALUE;
+       int right = 0;
+
+       for(int i=0;i<weights.length;i++){
+        if(left<weights[i]){
+            left=weights[i];
+        }
+        right+=weights[i];
+       }
+
+       while(left<right){
+        int mid = left+(right-left)/2;
+
+        int currload = 0;
+        int day = 1;
         for(int i=0;i<weights.length;i++){
-            if(left<weights[i]){
-                left = weights[i];
+            if(currload+weights[i]>mid){
+                day++;
+                currload = 0;
             }
-            right+=weights[i];
+            currload+=weights[i];
         }
-        int result = right;
-        while(left<=right){
-            int mid=left+(right-left)/2;
-            int currload = 0;
-            int day = 1;
-            for(int i=0;i<weights.length;i++){
-                if(currload + weights[i] > mid){
-                    day++;
-                    currload=0;
-                }
-                currload+=weights[i];
-            }
-            if(day>days){
-                left=mid+1;
-            }else{
-                right=mid-1;
-                result = mid;
-            }
+        if(day>days){
+            left=mid+1;
+        }else{
+            right=mid;
         }
-        return result;
+       } 
+       return right;
     }
 }
 ```
