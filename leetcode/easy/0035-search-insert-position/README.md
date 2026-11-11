@@ -10,6 +10,8 @@ You must write an algorithm with `O(log n)` runtime complexity.
 
  
 
+Original
+Java
  **Example 1:** 
 
 ```
@@ -47,25 +49,27 @@ Output: 4
 
 **Language:** Java  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 44.2 MB (beats 81.97%)  
-**Submitted:** 2026-11-09T19:56:17.740Z  
+**Memory:** 44.1 MB (beats 88.07%)  
+**Submitted:** 2026-11-11T05:02:57.973Z  
 
 ```java
 class Solution {
     public int searchInsert(int[] nums, int target) {
-        int left = 0;
+        int low = 0;
         int right = nums.length-1;
-        while(left<=right){
-            int mid=left+(right-left)/2;
-            if(nums[mid]==target){
-                 return mid;
-                 }else if(nums[mid]<target){
-                    left=mid+1;
-                 }else{
-                    right=mid-1;
-                 }
+
+        while(low<=right){
+            int mid = low + (right-low)/2;
+if(nums[mid]==target){
+    return mid;
+}
+            if(nums[mid]<target){
+                low=mid+1;
+            }else{
+                right=mid-1;
+            }
         }
-        return left;
+        return low;
     }
 }
 ```
