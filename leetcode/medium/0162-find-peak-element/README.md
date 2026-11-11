@@ -43,9 +43,9 @@ Explanation: Your function can return either index number 1 where the peak eleme
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 43.8 MB (beats 78.43%)  
-**Submitted:** 2026-11-10T14:50:24.558Z  
+**Runtime:** 0 ms  
+**Memory:** 40.9 MB  
+**Submitted:** 2026-11-11T18:25:58.055Z  
 
 ```java
 class Solution {
@@ -55,13 +55,14 @@ class Solution {
 
         while(left<right){
             int mid = left+(right-left)/2;
-            if(nums[mid] < nums[mid+1]){
+
+            if(nums[mid]<nums[mid+1]){
                 left=mid+1;
-            }else{
+            }else if(nums[mid]>nums[mid+1]){
                 right=mid;
             }
         }
-        return left;
+        return nums[left];
     }
 }
 ```
