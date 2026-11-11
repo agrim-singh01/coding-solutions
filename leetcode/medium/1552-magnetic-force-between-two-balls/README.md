@@ -12,6 +12,8 @@ Given the integer array `position` and the integer `m`. Return  *the required fo
 
  
 
+Original
+Java
  **Example 1:** 
 
 ```
@@ -43,46 +45,39 @@ Explanation: We can use baskets 1 and 1000000000.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 46 ms (beats 70.94%)  
-**Memory:** 79.1 MB (beats 45.74%)  
-**Submitted:** 2026-09-07T04:24:15.664Z  
+**Runtime:** 46 ms (beats 73.85%)  
+**Memory:** 77.6 MB (beats 99.57%)  
+**Submitted:** 2026-11-11T20:41:12.573Z  
 
 ```java
 class Solution {
     public int maxDistance(int[] position, int m) {
          Arrays.sort(position);
-       int low=1;
-       int high=(position[position.length-1]-position[0]);
+         int left = 1;
+         int right = position[position.length - 1] - position[0];
 
-       int ans=0;
-       while(low<=high){
-           int mid=low+(high-low)/2;
-           if(canPlace(position,m,mid)){
-ans = mid;
-low = mid + 1;
-           }else{
-               high = mid - 1;
-           }
-       }
-       return ans;
-    }
-    private boolean canPlace(int []position,int m , int dist){
-        int cows=1;
-        int last=position[0];
-        for(int i=1;i<position.length;i++){
-if(position[i] - last >= dist){
-    cows++;
-    last = position[i];
-}
-if(cows >= m){
-    return true;
-}
-        }
-        return false;
+         int ans = 0;
+         while(left<=right){
+            int mid = left+(right-left)/2;
+
+            int last = position[0];
+            int ball = 1;
+            for(int i=0;i<position.length;i++){
+                if(position[i] - last >= mid){
+                    ball++;
+                    last = position[i];
+                }
+            }
+            if(ball >= m){
+                left = mid+1;
+                ans=mid;
+            }else{
+                right=mid-1;
+            }
+         }
+         return ans;
     }
 }
-    
-
 ```
 
 ---
