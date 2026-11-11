@@ -36,41 +36,42 @@ Explanation: Since there are more students than total books, it's impossible to 
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-10T22:57:22.717Z  
+**Submitted:** 2026-11-11T19:52:34.998Z  
 
 ```java
 class Solution {
     public int findPages(int[] arr, int k) {
-        long left = 0;
-        long right=0;
-        for(int i=0;i<arr.length;i++){
-            if(arr[i]>left){
-                left=arr[i];
-            }
-            right+=arr[i];
-        }
-        if(arr.length<k) return -1;
+      if(k > arr.length) return -1;
+      long left = Integer.MIN_VALUE;
+      long right = 0;
+      for(int i=0;i<arr.length;i++){
+          if(left<arr[i]){
+              left=arr[i];
+          }
+          right = right + arr[i];
+      }
+      
+      while(left<right)
+      {
+        long mid = left+(right-left)/2;
+        int curr = 0;
+        int student = 1;
         
-        while(left<right){
-            long mid = left+(right-left)/2;
-            
-            int curr = 0;
-            int book = 1;
-            
-            for(int i=0;i<arr.length;i++){
-                if(curr+arr[i] > mid){
-                    book++;
-                    curr=0;
-                }
-                curr+=arr[i];
+        for(int i=0;i<arr.length;i++){
+            if(curr+arr[i]>mid){
+                student++;
+                curr=0;
             }
-            if(book<=k){
-                right=mid;
-            }else{
-                left=mid+1;
-            }
+            curr+=arr[i];
         }
-        return (int)left;
+        if(student > k){
+            left=mid+1;
+        }else{
+            right=mid;
+        }
+        
+      }
+      return (int)right;
         
     }
 }
