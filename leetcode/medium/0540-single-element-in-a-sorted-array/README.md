@@ -12,6 +12,8 @@ Your solution must run in `O(log n)` time and `O(1)` space.
 
  
 
+Original
+Java
  **Example 1:** 
 
 ```
@@ -38,33 +40,24 @@ Output: 10
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 52.2 MB (beats 95.71%)  
-**Submitted:** 2026-11-10T06:44:43.009Z  
+**Runtime:** 1 ms (beats 21.22%)  
+**Memory:** 51.7 MB (beats 99.66%)  
+**Submitted:** 2026-11-11T17:48:26.784Z  
 
 ```java
 class Solution {
     public int singleNonDuplicate(int[] nums) {
-        int n = nums.length;
-        if(n == 1) return nums[0];
-        if(nums[0] != nums[1]) return nums[0];
-        if(nums[n-1] != nums[n-2]) return nums[n-1];
+    int n = nums.length;
+    if(n == 1) return nums[0];
+    if(nums[0] != nums[1]) return nums[0];
+    if(nums[n-1] != nums[n-2]) return nums[n-1];
 
-        int left = 1;
-        int right = n-2;
-        while(left<=right){
-            int mid=left+(right-left)/2;
-
-            if(nums[mid] != nums[mid+1] && nums[mid] != nums[mid-1]){
-                return nums[mid];
-            }else if((mid % 2 == 0 && nums[mid] == nums[mid+1]) || mid % 2 != 0 && nums[mid] == nums[mid -1]){
-                left=mid+1;
-            }else{
-                right = mid-1;
-            }
-            
+    for(int i=1;i<nums.length-1;i++){
+        if(nums[i] != nums[i-1] && nums[i] != nums[i+1]){
+            return nums[i];
         }
-        return -1;
+    }
+    return -1;
     }
 }
 ```
