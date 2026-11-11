@@ -10,6 +10,8 @@ You must write an algorithm with `O(log n)` runtime complexity.
 
  
 
+Original
+Java
  **Example 1:** 
 
 ```
@@ -40,23 +42,24 @@ Explanation: 2 does not exist in nums so return -1
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 47.9 MB (beats 82.82%)  
-**Submitted:** 2026-11-09T18:23:40.034Z  
+**Runtime:** 0 ms  
+**Memory:** 41 MB  
+**Submitted:** 2026-11-11T04:58:52.615Z  
 
 ```java
 class Solution {
     public int search(int[] nums, int target) {
-        int low = 0;
-        int high = nums.length - 1;
-        while(low<=high){
-            int mid = low + (high-low)/2;
-            if(target == nums[mid] ){
+        int left = 0;
+        int right = nums.length-1;
+
+        while(left<=right){
+            int mid = left+(right-left)/2;
+            if(nums[mid] == target){
                 return mid;
-            }else if(target < nums[mid]){
-                high = mid-1;
+            }else if(nums[mid] <target){
+                left=mid+1;
             }else{
-                low = mid+1;
+                right=mid-1;
             }
         }
         return -1;
