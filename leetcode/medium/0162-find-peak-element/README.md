@@ -43,9 +43,9 @@ Explanation: Your function can return either index number 1 where the peak eleme
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 40.9 MB  
-**Submitted:** 2026-11-11T18:25:58.055Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 43.7 MB (beats 77.56%)  
+**Submitted:** 2026-11-11T18:27:05.515Z  
 
 ```java
 class Solution {
@@ -62,7 +62,7 @@ class Solution {
                 right=mid;
             }
         }
-        return nums[left];
+        return left;
     }
 }
 ```
