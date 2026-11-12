@@ -10,6 +10,8 @@ You must do this by modifying the input array in-place with `O(1)` extra memory.
 
  
 
+Original
+Java
  **Example 1:** 
 
 ```
@@ -36,15 +38,16 @@ Output: ["h","a","n","n","a","H"]
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 48.2 MB (beats 55.05%)  
-**Submitted:** 2026-09-09T21:49:19.446Z  
+**Runtime:** 0 ms  
+**Memory:** 41.4 MB  
+**Submitted:** 2026-11-12T20:26:48.573Z  
 
 ```java
 class Solution {
     public void reverseString(char[] s) {
         int left = 0;
-        int right = s.length - 1;
+        int right = s.length-1;
+
         while(left<right){
             char temp = s[left];
             s[left] = s[right];
