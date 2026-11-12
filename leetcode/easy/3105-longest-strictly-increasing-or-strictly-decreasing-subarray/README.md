@@ -63,8 +63,8 @@ Hence, we return `3`.
 
 **Language:** Java  
 **Runtime:** 1 ms (beats 98.37%)  
-**Memory:** 44.2 MB (beats 65.69%)  
-**Submitted:** 2026-11-12T20:11:27.772Z  
+**Memory:** 43.6 MB (beats 96.73%)  
+**Submitted:** 2026-11-12T20:12:32.878Z  
 
 ```java
 class Solution {
@@ -85,8 +85,8 @@ class Solution {
                 inc=1;
                 dec=1;
             }
-              int max = Math.max(inc,dec);
-        maxL = Math.max(max,maxL);
+ Math.max(inc,dec);
+        maxL = Math.max(Math.max(inc,dec),maxL);
         }
       
         return maxL;
