@@ -8,6 +8,8 @@ Given two integers `num1` and `num2`, return  *the  **sum**  of the two integers
 
  
 
+Original
+Java
  **Example 1:** 
 
 ```
@@ -36,8 +38,8 @@ Explanation: num1 + num2 = -6, so -6 is returned.
 
 **Language:** Java  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 41.9 MB (beats 97.03%)  
-**Submitted:** 2026-09-08T07:44:30.585Z  
+**Memory:** 42 MB (beats 54.70%)  
+**Submitted:** 2026-11-12T19:23:41.049Z  
 
 ```java
 class Solution {
