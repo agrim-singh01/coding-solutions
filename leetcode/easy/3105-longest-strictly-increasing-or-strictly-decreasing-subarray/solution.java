@@ -16,8 +16,8 @@ class Solution {
                 inc=1;
                 dec=1;
             }
-              int max = Math.max(inc,dec);
-        maxL = Math.max(max,maxL);
+ Math.max(inc,dec);
+        maxL = Math.max(Math.max(inc,dec),maxL);
         }
       
         return maxL;
