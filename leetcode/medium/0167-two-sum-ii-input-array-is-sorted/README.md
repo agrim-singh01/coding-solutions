@@ -4,9 +4,11 @@
 
 ## Problem
 
-Given a  **1-indexed**  array of integers `numbers` that is already  ***sorted in non-decreasing order** *, find two numbers such that they add up to a specific `target` number. Let these two numbers be `numbers[index1]` and `numbers[index2]` where `1 <= index1 < index2 <= numbers.length`.
+You are given a  **1-indexed**  array of integers `numbers` that is already  **sorted in non-decreasing order**.
 
-Return *the indices of the two numbers* `index1` *and* `index2` *,  **each incremented by one,**  as an integer array* `[index1, index2]` *of length 2.* 
+Find  **two**  numbers such that they add up to a specific `target` number. Let these two numbers be `numbers[index1]` and `numbers[index2]` where `1 <= index1 < index2 <= numbers.length`.
+
+Return the indices of the two numbers `index1` and `index2` as an integer array `[index1, index2]` of length 2.
 
 The tests are generated such that there is  **exactly one solution**. You  **may not**  use the same element twice.
 
@@ -54,26 +56,25 @@ Explanation: The sum of -1 and 0 is -1. Therefore index1 = 1, index2 = 2. We ret
 ## Solution
 
 **Language:** Java  
-**Runtime:** 2 ms (beats 95.76%)  
-**Memory:** 48 MB (beats 95.31%)  
-**Submitted:** 2026-09-09T03:27:36.781Z  
+**Runtime:** 2 ms (beats 97.81%)  
+**Memory:** 47.5 MB (beats 99.02%)  
+**Submitted:** 2026-11-12T19:40:55.528Z  
 
 ```java
 class Solution {
     public int[] twoSum(int[] numbers, int target) {
-        int left = 0;
-        int right = numbers.length - 1;
-        while(left<right){
-            int sum = numbers[left] + numbers[right];
-            if(sum == target){
+        int left = 0,right=numbers.length-1;
+        while(left<right)
+        {
+            if(numbers[left]+numbers[right] == target){
                 return new int[] {left+1,right+1};
-            }else if(sum>target){
+            }else if(numbers[left]+numbers[right]>target){
                 right--;
             }else{
                 left++;
             }
         }
-        return new int[] {-1,-1};
+        return new int[]{-1,-1};
     }
 }
 ```
