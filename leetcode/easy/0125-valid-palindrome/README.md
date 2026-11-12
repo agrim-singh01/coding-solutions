@@ -51,45 +51,33 @@ Since an empty string reads the same forward and backward, it is a palindrome.
 
 **Language:** Java  
 **Runtime:** 3 ms (beats 69.41%)  
-**Memory:** 43.6 MB (beats 96.64%)  
-**Submitted:** 2026-11-12T18:35:04.991Z  
+**Memory:** 43.7 MB (beats 90.23%)  
+**Submitted:** 2026-11-12T18:54:35.195Z  
 
 ```java
 class Solution {
     public boolean isPalindrome(String s) {
-        if (s == null || s.isEmpty()) {
-            return true;
+       int  left = 0;
+       int right  = s.length()-1;
+       while(left<right){
+        char l = s.charAt(left);
+       char r = s.charAt(right);
+        if(!Character.isLetterOrDigit(l)){
+            left++;
+        }else if(!Character.isLetterOrDigit(r)){
+            right--;
+        }else{
+if(Character.toLowerCase(l) != Character.toLowerCase(r)){
+    return false;
+}
+ left++;
+        right--;
         }
-        
-        int left = 0;
-        int right = s.length() - 1;
-        
-        while (left < right) {
-            char charLeft = s.charAt(left);
-            char charRight = s.charAt(right);
-            
-            // Skip non-alphanumeric characters from the left
-            if (!Character.isLetterOrDigit(charLeft)) {
-                left++;
-            } 
-            // Skip non-alphanumeric characters from the right
-            else if (!Character.isLetterOrDigit(charRight)) {
-                right--;
-            } 
-            // Compare characters ignoring case
-            else {
-                if (Character.toLowerCase(charLeft) != Character.toLowerCase(charRight)) {
-                    return false;
-                }
-                left++;
-                right--;
-            }
-        }
-        
-        return true;
+       
+       }
+       return true;
     }
 }
-
 ```
 
 ---
