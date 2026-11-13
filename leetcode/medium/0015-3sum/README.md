@@ -54,9 +54,9 @@ Explanation: The only possible triplet sums up to 0.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 32 ms (beats 76.44%)  
-**Memory:** 58.8 MB (beats 69.57%)  
-**Submitted:** 2026-11-13T18:27:15.773Z  
+**Runtime:** 27 ms (beats 98.97%)  
+**Memory:** 58.5 MB (beats 86.49%)  
+**Submitted:** 2026-11-13T18:28:27.287Z  
 
 ```java
 class Solution {
@@ -64,6 +64,7 @@ class Solution {
         List<List<Integer>> res = new ArrayList<>();
         Arrays.sort(nums);
         for(int i=0;i<nums.length;i++){
+            if (nums[i] > 0) break;
             if(i>0 && nums[i] == nums[i-1]){
                 continue;
             }
