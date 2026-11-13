@@ -44,14 +44,15 @@ Output: [[2,2,2,2]]
 
 **Language:** Java  
 **Runtime:** 21 ms (beats 42.24%)  
-**Memory:** 45.1 MB (beats 90.51%)  
-**Submitted:** 2026-11-13T19:57:32.731Z  
+**Memory:** 45.5 MB (beats 62.51%)  
+**Submitted:** 2026-11-13T19:57:56.876Z  
 
 ```java
 class Solution {
     public List<List<Integer>> fourSum(int[] nums, int target) {
         List<List<Integer>> res = new ArrayList<>();
         Arrays.sort(nums);
+        if(nums.length<4) return res;
         for(int i=0;i<nums.length-3;i++){
 if(i > 0 && nums[i]==nums[i-1]){
     continue;
