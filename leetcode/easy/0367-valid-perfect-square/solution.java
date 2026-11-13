@@ -5,7 +5,7 @@ class Solution {
 
         while(l<=r){
             int mid=l+(r-l)/2;
-            long sqr = mid*mid;
+            long sqr =(long) mid*mid;
             if(num == sqr){
                 return true;
             }else if(num<sqr){
