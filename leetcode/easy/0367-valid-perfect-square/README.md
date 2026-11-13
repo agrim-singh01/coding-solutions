@@ -42,8 +42,8 @@ Explanation: We return false because 3.742 * 3.742 = 14 and 3.742 is not an inte
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 41.1 MB  
-**Submitted:** 2026-11-13T21:18:41.295Z  
+**Memory:** 40.4 MB  
+**Submitted:** 2026-11-13T21:19:07.068Z  
 
 ```java
 class Solution {
@@ -53,7 +53,7 @@ class Solution {
 
         while(l<=r){
             int mid=l+(r-l)/2;
-            long sqr = mid*mid;
+            long sqr =(long) mid*mid;
             if(num == sqr){
                 return true;
             }else if(num<sqr){
