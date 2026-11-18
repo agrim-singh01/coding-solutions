@@ -54,9 +54,9 @@ Explanation: The only possible triplet sums up to 0.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 27 ms (beats 98.97%)  
-**Memory:** 58.5 MB (beats 86.49%)  
-**Submitted:** 2026-11-13T18:28:27.287Z  
+**Runtime:** 28 ms (beats 97.31%)  
+**Memory:** 58.5 MB (beats 84.49%)  
+**Submitted:** 2026-11-18T15:13:38.251Z  
 
 ```java
 class Solution {
