@@ -43,9 +43,9 @@ Output: [[2,2,2,2]]
 ## Solution
 
 **Language:** Java  
-**Runtime:** 21 ms (beats 42.24%)  
-**Memory:** 45.5 MB (beats 62.51%)  
-**Submitted:** 2026-11-13T19:57:56.876Z  
+**Runtime:** 21 ms (beats 42.28%)  
+**Memory:** 45.5 MB (beats 58.25%)  
+**Submitted:** 2026-11-18T15:14:11.048Z  
 
 ```java
 class Solution {
