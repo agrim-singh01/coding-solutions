@@ -45,9 +45,9 @@ Explanation: The sum that is closest to the target is 0. (0 + 0 + 0 = 0).
 ## Solution
 
 **Language:** Java  
-**Runtime:** 17 ms (beats 83.86%)  
-**Memory:** 45.2 MB (beats 56.25%)  
-**Submitted:** 2026-11-18T15:13:54.495Z  
+**Runtime:** 17 ms (beats 84.56%)  
+**Memory:** 45.2 MB (beats 61.81%)  
+**Submitted:** 2026-11-21T18:41:54.236Z  
 
 ```java
 class Solution {
