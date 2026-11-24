@@ -60,9 +60,9 @@ The sum of `nums[0]` and `nums[1]` is `3 + 3 = 6`, which equals the target. Ther
 ## Solution
 
 **Language:** Java  
-**Runtime:** 45 ms (beats 29.07%)  
-**Memory:** 46.5 MB (beats 85.73%)  
-**Submitted:** 2026-11-19T18:15:37.567Z  
+**Runtime:** 39 ms (beats 36.75%)  
+**Memory:** 46.6 MB (beats 74.59%)  
+**Submitted:** 2026-11-24T14:45:44.486Z  
 
 ```java
 class Solution {
