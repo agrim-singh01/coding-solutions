@@ -8,6 +8,8 @@ Given two strings `needle` and `haystack`, return the index of the first occurre
 
  
 
+Original
+Java
  **Example 1:** 
 
 ```
@@ -38,23 +40,13 @@ Explanation: "leeto" did not occur in "leetcode", so we return -1.
 
 **Language:** Java  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 43.2 MB (beats 33.60%)  
-**Submitted:** 2026-09-13T10:40:41.720Z  
+**Memory:** 42.5 MB (beats 79.11%)  
+**Submitted:** 2026-11-28T13:30:31.009Z  
 
 ```java
 class Solution {
     public int strStr(String haystack, String needle) {
-       // return haystack.indexOf(needle);
-
-       if(needle.length()>haystack.length()){
-        return -1;
-       }
-       for(int i=0;i<=haystack.length()-needle.length();i++){
-        if(haystack.substring(i,i+needle.length()).equals(needle)){
-            return i;
-        }       
-        }
-        return -1;
+        return haystack.indexOf(needle);
     }
 }
 ```
